@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#bg {
+    background-image: url('Pomeranian-GettyImages-1014940472-a6ba0030958a4bbba0eee3e982ee9bc6.jpg');
+    height: 100vh;
+    width: 100vw;
+}
+
+#mainButton {
+    color: red;
+}
+
+#question {
+    color: white;
+    font-size: 2em;
+    font-family: 'Arial';
+    text-align: center;
+    position: absolute;
+    top: 1em;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+#input {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 60vh;
+    left: 10vw;
+    z-index: 1;
+    border-radius: 10em;
+    font-size: xx-large;
+    padding: 1em;
+}
+
+#button {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 80vh;
+    left: 15vw;
+    z-index: 1;
+    border-radius: 10em;
+    font-size: xx-large;
+    padding: 1em;
+    color: rgb(56, 56, 56);
+}

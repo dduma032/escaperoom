@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#bg {
+    background-image: url('Interior-Empty-Classroom-clipart.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#mainButton {
+    color: red;
+}
+
+#question {
+    color: rgb(243, 243, 243);
+    font-size: 2em;
+    font-family: 'Arial';
+    text-align: center;
+    position: absolute;
+    top: 3em;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+#input1, #input2 {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 60vh;
+    left: 10vw;
+    z-index: 1;
+    border-radius: 10em;
+    font-size: xx-large;
+    padding: 1em;
+}
+
+#input1 {
+    top: 55vh;
+}
+
+#button {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 80vh;
+    left: 15vw;
+    z-index: 1;
+    border-radius: 10em;
+    font-size: xx-large;
+    padding: 1em;
+    color: rgb(56, 56, 56);
+}
+
+#hiddenImage {
+    position: absolute;
+    top: 75vh;
+    left: 25vw;
+    width: 10em;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#hiddenImage2 {
+    position: absolute;
+    bottom: 0;
+    left: 55vw;
+    width: 10em;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#hiddenImage3 {
+    position: absolute;
+    top: 80vh;
+    left: 80vw;
+    width: 10em;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- div with an image background -->
+    <div id='bg'>
+        <p id='question'>This is a new question</p>
+        <img src='shutterstock_1335588113.png' id='hiddenImage' />
+        <img src='Homepage-Cat-MOBILE.png' id='hiddenImage2' />
+        <img src='orangeswordtail_600x400.png' id='hiddenImage3' />
+    </div>
+
+    <script>
+var loader = setInterval(function () {
+    if (document.readyState !== 'complete') return;
+    clearInterval(loader);
+    main();
+}, 100);
+
+
+
+let main = function () {
+
+    let sequence = '';
+    let answer = /123/;
+
+    const image = document.getElementById('hiddenImage');
+    image.addEventListener('click', function () {
+        sequence += '1';
+    });
+
+    const image2 = document.getElementById('hiddenImage2');
+    image2.addEventListener('click', function () {
+        sequence += '2';
+    });
+
+    const image3 = document.getElementById('hiddenImage3');
+    image3.addEventListener('click', function () {
+        sequence += '3';
+        if (answer.test(sequence)) {
+            window.location.href = './index.html';
+        }
+    });
+
+
+}
+    </script>
+</body>
+</html>
